@@ -30,9 +30,9 @@ spring:
 
     # MySQL 配置
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://106.14.116.156:3306/zfile?characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
-      username: root
-      password: lgz171213
+      url: jdbc:mysql://172.0.0.1:3306/zfile?characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+      username: xx
+      password: xx
   jackson:
     date-format: yyyy-MM-dd HH:mm
     time-zone: GMT+8
