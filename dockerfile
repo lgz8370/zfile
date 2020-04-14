@@ -1,4 +1,4 @@
-FROM  registry.cn-shenzhen.aliyuncs.com/ylcloud/20190728:yl_cjh_baseimage as build
+FROM  registry.cn-shenzhen.aliyuncs.com/lgz_8370/base_images as build
 
 ENV LANG en_US.utf8
 
