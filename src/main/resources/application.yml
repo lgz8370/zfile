@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
   servlet:
     context-path: ''
   tomcat:
@@ -8,31 +8,31 @@ server:
     enabled: true
 
 spring:
-  h2:
-    console:
-      settings:
-        web-allow-others: true
-      path: /h2-console
-      enabled: false
+#  h2:
+#    console:
+#      settings:
+#        web-allow-others: true
+#      path: /h2-console
+#      enabled: false
   datasource:
     # 初始化数据导入
-    data: classpath*:db/data.sql
-    sql-script-encoding: utf-8
-
-    initialization-mode: always
-    continue-on-error: true
+#    data: classpath*:db/data.sql
+#    sql-script-encoding: utf-8
+#
+#    initialization-mode: always
+#    continue-on-error: true
 
     # h2 内存数据库 配置
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:~/.zfile/db/zfile
-    username: zfile
-    password: 123456
+#    driver-class-name: org.h2.Driver
+#    url: jdbc:h2:~/.zfile/db/zfile
+#    username: zfile
+#    password: 123456
 
     # MySQL 配置
-  #    driver-class-name: com.mysql.jdbc.Driver
-  #    url: jdbc:mysql://127.0.0.1:3306/zfile?characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
-  #    username: root
-  #    password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://106.14.116.156:3306/zfile?characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+      username: root
+      password: lgz171213
   jackson:
     date-format: yyyy-MM-dd HH:mm
     time-zone: GMT+8
