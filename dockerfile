@@ -6,10 +6,7 @@ ENV LANG en_US.utf8
 WORKDIR /home/project/zfile/zfile_src/
 
 ADD / .
-RUN /bin/bash -c 'mvn clean install -Pmaster -Dmaven.test.skip=true; \
-    pro_version=-2.2; \
-    dir_yl=/home/project/zfile/; \
-    dir_ylLib=/home/project/zfile/lib/; \
+RUN /bin/bash -c 'mvn clean install -Pmaster -Dmaven.test.skip=true;'
 
 COPY  /home/project/zfile/zfile_src/target/lib/*.jar /home/project/zfile/lib/;
       /home/project/zfile/zfile_src/DocYl-dev.sh /home/project/zfile/;
