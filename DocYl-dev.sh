@@ -12,13 +12,13 @@ sleep 5s
 
 
 jarversion='-2.2.jar'
-basepath='/home/zfile/'
+basepath='/home/project/zfile/'
 
 #admin must at last
 ylpro01=zfile
 #last
 
-cd /home/yanfa_ylcloud_java/yl_cloud
+cd /home/project/zfile
 
 nohup java -jar -Xms100m -Xmx200m $ylpro01$jarversion > $basepath$ylpro01.out & 2>&1 &
 sh DocYlCheck.sh $basepath$ylpro01.out
