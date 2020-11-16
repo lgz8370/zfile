@@ -6,7 +6,7 @@ ENV LANG en_US.utf8
 WORKDIR /home/project/zfile/zfile_src/
 
 ADD / .
-RUN /bin/bash -c 'mvn clean install -Pmaseter -Dmaven.test.skip=true -Dmaven.repo.local=/home/project/zfile/; \
+RUN /bin/bash -c 'mvn clean install -Pmaster -Dmaven.test.skip=true -Dmaven.repo.local=/home/project/zfile/; \
     pro_version=-2.2; \
     dir_yl=/home/project/zfile/; \
     dir_ylLib=/home/project/zfile/lib/; \
