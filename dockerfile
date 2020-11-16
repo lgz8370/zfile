@@ -10,9 +10,10 @@ RUN /bin/bash -c 'mvn clean install -Pmaster -Dmaven.test.skip=true; \
     pro_version=-2.2; \
     dir_yl=/home/project/zfile/; \
     dir_ylLib=/home/project/zfile/lib/; \
-    cp -rf zfile/target/lib/*.jar ${dir_ylLib}; \
-    cp -rf DocYl-dev.sh ${dir_yl}; \
-    cp -rf DocYlCheck.sh ${dir_yl}; \
-    cp -rf zfile/target/${pro_version}.jar ${dir_yl};\
+
+COPY  /home/project/zfile/zfile_src/target/lib/*.jar /home/project/zfile/lib/;
+      /home/project/zfile/zfile_src/DocYl-dev.sh /home/project/zfile/;
+      /home/project/zfile/zfile_src/DocYlCheck.sh /home/project/zfile/;
+      /home/project/zfile/zfile_src/target/zfile-2.2 /home/project/zfile/;
 
 CMD ["sh",/home/project/zfile/DocYl-dev.sh"]
