@@ -7,9 +7,9 @@ WORKDIR /home/project/zfile/zfile_src/
 
 ADD / .
 RUN /bin/bash -c 'mvn clean install -Pmaster -Dmaven.test.skip=true
-    && cp -rf zfile/target/lib/*.jar /home/project/zfile/lib/
-    && cp -rf zfile/target/DocYl-dev.sh /home/project/zfile/
-    && cp -rf zfile/target/DocYlCheck.sh /home/project/zfile/
-    && cp -rf zfile/target/zfile-2.2.jar /home/project/zfile/'
+    \ && cp -rf zfile/target/lib/*.jar /home/project/zfile/lib/ \
+    \ && cp -rf zfile/target/DocYl-dev.sh /home/project/zfile/ \
+    \ && cp -rf zfile/target/DocYlCheck.sh /home/project/zfile/ \
+    \ && cp -rf zfile/target/zfile-2.2.jar /home/project/zfile/'\
 
 CMD ["sh",/home/project/zfile/DocYl-dev.sh"]
