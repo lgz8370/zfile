@@ -6,11 +6,10 @@ ENV LANG en_US.utf8
 WORKDIR /home/project/zfile/zfile_src/
 
 ADD / .
-RUN /bin/bash -c 'mvn clean install -Pmaster -Dmaven.test.skip=true;'
-
-COPY  /home/project/zfile/zfile_src/target/lib/*.jar /home/project/zfile/lib/;
-      /home/project/zfile/zfile_src/DocYl-dev.sh /home/project/zfile/;
-      /home/project/zfile/zfile_src/DocYlCheck.sh /home/project/zfile/;
-      /home/project/zfile/zfile_src/target/zfile-2.2 /home/project/zfile/;
+RUN /bin/bash -c 'mvn clean install -Pmaster -Dmaven.test.skip=true
+    && cp -rf zfile/target/lib/*.jar /home/project/zfile/lib/
+    && cp -rf zfile/target/DocYl-dev.sh /home/project/zfile/
+    && cp -rf zfile/target/DocYlCheck.sh /home/project/zfile/
+    && cp -rf zfile/target/zfile-2.2.jar /home/project/zfile/'
 
 CMD ["sh",/home/project/zfile/DocYl-dev.sh"]
